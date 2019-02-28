@@ -49,14 +49,18 @@ class App extends Component {
             </option>
           ))}
         </select>
-        <table className="currency-table">
+        <table className="currency-table" style={{ width: "100%" }}>
           <thead>
             <tr>
+              <th>Currency</th>
               <th>Exchange Rate</th>
             </tr>
           </thead>
           <tbody className="currency-body">
-            <tr>{this.exchangeRate()}</tr>
+            <tr>
+              <td>{this.state.base}</td>
+              <td>{this.exchangeRate()}</td>
+            </tr>
           </tbody>
         </table>
       </div>
